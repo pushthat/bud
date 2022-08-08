@@ -47,6 +47,7 @@ func (l *loader) Load() (state *State, err error) {
 		return nil, err
 	}
 	// Add initial imports
+	l.imports.AddStd("fmt")
 	l.imports.AddStd("net/http", "context")
 	l.imports.AddNamed("middleware", "github.com/livebud/bud/package/middleware")
 	l.imports.AddNamed("webrt", "github.com/livebud/bud/framework/web/webrt")
