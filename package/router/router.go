@@ -63,6 +63,8 @@ func (rt *Router) Delete(route string, handler http.Handler) error {
 }
 
 func (rt *Router) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("router is called")
+	fmt.Println(r.URL)
 	handler := rt.Middleware(http.NotFoundHandler())
 	handler.ServeHTTP(w, r)
 }
