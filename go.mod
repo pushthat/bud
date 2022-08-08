@@ -1,4 +1,4 @@
-module github.com/pushthat/bud
+module github.com/livebud/bud
 
 go 1.18
 
