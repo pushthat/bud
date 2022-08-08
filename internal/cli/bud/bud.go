@@ -232,27 +232,27 @@ func FileServer(log log.Interface, module *gomod.Module, vm js.VM, flag *framewo
 func EnsureVersionAlignment(ctx context.Context, module *gomod.Module, budVersion string) error {
 	modfile := module.File()
 	// Do nothing for the latest version
-	if budVersion == "latest" {
-		// If the module file already replaces bud, don't do anything.
-		if modfile.Replace(`github.com/livebud/bud`) != nil {
-			return nil
-		}
-		// Best effort attempt to replace bud with the latest version.
-		budModule, err := BudModule()
-		if err != nil {
-			return nil
-		}
-		// Replace bud with the local version if we found it.
-		if err := modfile.AddReplace("github.com/livebud/bud", "", budModule.Directory(), ""); err != nil {
-			return err
-		}
-		// Write the go.mod file back to disk.
-		if err := os.WriteFile(module.Directory("go.mod"), modfile.Format(), 0644); err != nil {
-			return err
-		}
-		return nil
-	}
-	target := "v" + budVersion
+	//if budVersion == "latest" {
+	//	// If the module file already replaces bud, don't do anything.
+	//	if modfile.Replace(`github.com/livebud/bud`) != nil {
+	//		return nil
+	//	}
+	//	// Best effort attempt to replace bud with the latest version.
+	//	budModule, err := BudModule()
+	//	if err != nil {
+	//		return nil
+	//	}
+	//	// Replace bud with the local version if we found it.
+	//	if err := modfile.AddReplace("github.com/livebud/bud", "", budModule.Directory(), ""); err != nil {
+	//		return err
+	//	}
+	//	// Write the go.mod file back to disk.
+	//	if err := os.WriteFile(module.Directory("go.mod"), modfile.Format(), 0644); err != nil {
+	//		return err
+	//	}
+	//	return nil
+	//}
+	target := "v" + "0.2.3"
 	require := modfile.Require("github.com/livebud/bud")
 	// We're good, the CLI matches the runtime version
 	if require != nil && require.Version == target {
