@@ -62,6 +62,7 @@ type Server struct {
 }
 
 func (s *Server) ServeLambda() error {
+    fmt.Println("starting lambda execution")
 	lambda.Start(httpadapter.New(s.Handler).ProxyWithContext)
 	return nil
 }

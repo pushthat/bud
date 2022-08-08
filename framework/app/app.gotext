@@ -10,6 +10,7 @@ import (
 {{- end }}
 
 func main() {
+    fmt.Println("STARTING APP")
 	os.Exit(run(context.Background(), os.Args[1:]...))
 }
 
