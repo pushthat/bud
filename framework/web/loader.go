@@ -51,6 +51,8 @@ func (l *loader) Load() (state *State, err error) {
 	l.imports.AddNamed("middleware", "github.com/livebud/bud/package/middleware")
 	l.imports.AddNamed("webrt", "github.com/livebud/bud/framework/web/webrt")
 	l.imports.AddNamed("router", "github.com/livebud/bud/package/router")
+	l.imports.Add("github.com/aws/aws-lambda-go/lambda")
+	l.imports.Add("github.com/awslabs/aws-lambda-go-api-proxy/httpadapter")
 	// Show the welcome page if we don't have controllers, views or public files
 	if len(exist) == 0 {
 		l.imports.AddNamed("welcome", "github.com/livebud/bud/framework/web/welcome")
