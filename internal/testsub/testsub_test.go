@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testsub"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testsub"
 )
 
 func TestRun(t *testing.T) {

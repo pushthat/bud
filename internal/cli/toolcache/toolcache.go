@@ -4,7 +4,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/pushthat/bud/internal/cli/bud"
 )
 
 func New(bud *bud.Command) *Command {

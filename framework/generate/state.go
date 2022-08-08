@@ -1,8 +1,8 @@
 package generate
 
 import (
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/di"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/di"
 )
 
 type State struct {

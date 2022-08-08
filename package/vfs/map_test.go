@@ -4,8 +4,8 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/package/vfs"
 )
 
 func TestMap(t *testing.T) {

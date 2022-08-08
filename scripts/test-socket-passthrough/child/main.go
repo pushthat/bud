@@ -10,11 +10,11 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/livebud/bud/internal/sig"
+	"github.com/pushthat/bud/internal/sig"
 
-	"github.com/livebud/bud/package/socket"
+	"github.com/pushthat/bud/package/socket"
 
-	"github.com/livebud/bud/internal/extrafile"
+	"github.com/pushthat/bud/internal/extrafile"
 )
 
 func main() {

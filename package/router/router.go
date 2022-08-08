@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/livebud/bud/package/router/radix"
+	"github.com/pushthat/bud/package/router/radix"
 )
 
 // New router

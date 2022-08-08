@@ -5,16 +5,16 @@ import (
 	"io/fs"
 	"path"
 
-	"github.com/livebud/bud/framework"
-	"github.com/livebud/bud/framework/view/dom"
-	"github.com/livebud/bud/framework/view/ssr"
+	"github.com/pushthat/bud/framework"
+	"github.com/pushthat/bud/framework/view/dom"
+	"github.com/pushthat/bud/framework/view/ssr"
 
-	"github.com/livebud/bud/framework/transform/transformrt"
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/embed"
-	"github.com/livebud/bud/internal/entrypoint"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/framework/transform/transformrt"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/embed"
+	"github.com/pushthat/bud/internal/entrypoint"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/gomod"
 )
 
 func Load(
@@ -80,13 +80,13 @@ func (l *loader) Load(ctx context.Context) (state *State, err error) {
 	}
 	// fmt.Println(l.Flag.Embed, l.Transform.SSR, views)
 	if l.flag.Embed {
-		l.imports.AddNamed("overlay", "github.com/livebud/bud/package/overlay")
-		l.imports.AddNamed("mod", "github.com/livebud/bud/package/gomod")
-		l.imports.AddNamed("js", "github.com/livebud/bud/package/js")
+		l.imports.AddNamed("overlay", "github.com/pushthat/bud/package/overlay")
+		l.imports.AddNamed("mod", "github.com/pushthat/bud/package/gomod")
+		l.imports.AddNamed("js", "github.com/pushthat/bud/package/js")
 	} else {
-		l.imports.AddNamed("budclient", "github.com/livebud/bud/package/budclient")
+		l.imports.AddNamed("budclient", "github.com/pushthat/bud/package/budclient")
 	}
-	l.imports.AddNamed("viewrt", "github.com/livebud/bud/framework/view/viewrt")
+	l.imports.AddNamed("viewrt", "github.com/pushthat/bud/framework/view/viewrt")
 	state.Imports = l.imports.List()
 	return state, nil
 }

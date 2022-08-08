@@ -7,10 +7,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/package/gomod"
 
-	"github.com/livebud/bud/package/commander"
-	"github.com/livebud/bud/package/log/console"
+	"github.com/pushthat/bud/package/commander"
+	"github.com/pushthat/bud/package/log/console"
 )
 
 func main() {

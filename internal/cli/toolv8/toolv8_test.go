@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/livebud/bud/internal/cli/testcli"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/cli/testcli"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
 )
 
 func TestToolV8(t *testing.T) {

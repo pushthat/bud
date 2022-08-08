@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
-	"github.com/livebud/bud/internal/versions"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/versions"
 )
 
 func TestDir(t *testing.T) {
@@ -18,7 +18,7 @@ func TestDir(t *testing.T) {
 	dir := t.TempDir()
 	td := testdir.New(dir)
 	td.Backup = false
-	td.Modules["github.com/livebud/bud-test-plugin"] = "v0.0.2"
+	td.Modules["github.com/pushthat/bud-test-plugin"] = "v0.0.2"
 	td.Files["controller/controller.go"] = `package controller`
 	td.BFiles["public/favicon.ico"] = []byte{0x00}
 	td.NodeModules["svelte"] = versions.Svelte
@@ -46,7 +46,7 @@ func TestRefresh(t *testing.T) {
 	dir := t.TempDir()
 	td := testdir.New(dir)
 	td.Backup = true
-	td.Modules["github.com/livebud/bud-test-plugin"] = "v0.0.2"
+	td.Modules["github.com/pushthat/bud-test-plugin"] = "v0.0.2"
 	td.Files["controller/controller.go"] = `package controller`
 	td.BFiles["public/favicon.ico"] = []byte{0x00}
 	td.NodeModules["svelte"] = versions.Svelte

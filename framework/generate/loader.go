@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"io/fs"
 
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/di"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/di"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/vfs"
 )
 
 func Load(fsys fs.FS, injector *di.Injector, module *gomod.Module) (*State, error) {
@@ -44,8 +44,8 @@ func (l *loader) loadProvider() *di.Provider {
 		Name:    "loadGenerator",
 		Imports: l.imports,
 		Params: []*di.Param{
-			{Import: "github.com/livebud/bud/package/log", Type: "Interface"},
-			{Import: "github.com/livebud/bud/package/gomod", Type: "*Module"},
+			{Import: "github.com/pushthat/bud/package/log", Type: "Interface"},
+			{Import: "github.com/pushthat/bud/package/gomod", Type: "*Module"},
 			{Import: "context", Type: "Context"},
 		},
 		Results: []di.Dependency{
@@ -61,10 +61,10 @@ func (l *loader) loadProvider() *di.Provider {
 
 func (l *loader) loadImports() []*imports.Import {
 	l.imports.AddStd("os", "context", "errors")
-	l.imports.AddNamed("commander", "github.com/livebud/bud/package/commander")
-	l.imports.AddNamed("console", "github.com/livebud/bud/package/log/console")
-	l.imports.AddNamed("log", "github.com/livebud/bud/package/log")
-	l.imports.AddNamed("filter", "github.com/livebud/bud/package/log/filter")
-	l.imports.AddNamed("remotefs", "github.com/livebud/bud/package/remotefs")
+	l.imports.AddNamed("commander", "github.com/pushthat/bud/package/commander")
+	l.imports.AddNamed("console", "github.com/pushthat/bud/package/log/console")
+	l.imports.AddNamed("log", "github.com/pushthat/bud/package/log")
+	l.imports.AddNamed("filter", "github.com/pushthat/bud/package/log/filter")
+	l.imports.AddNamed("remotefs", "github.com/pushthat/bud/package/remotefs")
 	return l.imports.List()
 }

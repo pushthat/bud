@@ -7,8 +7,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/livebud/bud/framework"
-	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/pushthat/bud/framework"
+	"github.com/pushthat/bud/internal/cli/bud"
 )
 
 func New(bud *bud.Command, in *bud.Input) *Command {

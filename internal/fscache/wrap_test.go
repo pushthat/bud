@@ -5,11 +5,11 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/internal/is"
 
-	"github.com/livebud/bud/internal/fscache"
-	"github.com/livebud/bud/package/log/testlog"
-	"github.com/livebud/bud/package/merged"
+	"github.com/pushthat/bud/internal/fscache"
+	"github.com/pushthat/bud/package/log/testlog"
+	"github.com/pushthat/bud/package/merged"
 )
 
 func TestReadDirFile(t *testing.T) {

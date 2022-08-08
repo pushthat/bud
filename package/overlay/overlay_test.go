@@ -2,18 +2,17 @@ package overlay_test
 
 import (
 	"context"
+	"io/fs"
 	"strings"
 	"testing"
 
-	"github.com/livebud/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/testdir"
 
-	"io/fs"
+	"github.com/pushthat/bud/package/log/testlog"
+	"github.com/pushthat/bud/package/overlay"
 
-	"github.com/livebud/bud/package/log/testlog"
-	"github.com/livebud/bud/package/overlay"
-
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/package/gomod"
 )
 
 func TestPlugins(t *testing.T) {
@@ -22,8 +21,8 @@ func TestPlugins(t *testing.T) {
 	log := testlog.New()
 	dir := t.TempDir()
 	td := testdir.New(dir)
-	td.Modules["github.com/livebud/bud-test-plugin"] = "v0.0.8"
-	td.Modules["github.com/livebud/bud-test-nested-plugin"] = "v0.0.5"
+	td.Modules["github.com/pushthat/bud-test-plugin"] = "v0.0.8"
+	td.Modules["github.com/pushthat/bud-test-nested-plugin"] = "v0.0.5"
 	err := td.Write(ctx)
 	is.NoErr(err)
 	module, err := gomod.Find(dir)

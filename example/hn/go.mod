@@ -1,9 +1,9 @@
-module github.com/livebud/bud/example/hn
+module github.com/pushthat/bud/example/hn
 
 go 1.17
 
 require (
-	github.com/livebud/bud v0.1.11
+	github.com/pushthat/bud v0.1.11
 	github.com/matthewmueller/hackernews v0.3.0
 )
 
@@ -25,4 +25,4 @@ require (
 	golang.org/x/xerrors v0.0.0-20220411194840-2f41105eb62f // indirect
 )
 
-replace github.com/livebud/bud => ../..
+replace github.com/pushthat/bud => ../..

@@ -1,6 +1,6 @@
 package di
 
-import "github.com/livebud/bud/package/parser"
+import "github.com/pushthat/bud/package/parser"
 
 type Aliases map[Dependency]Dependency
 

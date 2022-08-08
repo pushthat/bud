@@ -8,11 +8,11 @@ import (
 	"testing"
 
 	"github.com/lithammer/dedent"
-	"github.com/livebud/bud/internal/cli/testcli"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
-	"github.com/livebud/bud/internal/versions"
 	"github.com/matthewmueller/diff"
+	"github.com/pushthat/bud/internal/cli/testcli"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/versions"
 )
 
 func TestNoActions(t *testing.T) {
@@ -1970,7 +1970,7 @@ func TestStructInStruct(t *testing.T) {
 	is.Equal(result.Stderr(), "")
 }
 
-// https://github.com/livebud/bud/issues/101
+// https://github.com/pushthat/bud/issues/101
 func TestLoadController(t *testing.T) {
 	is := is.New(t)
 	ctx := context.Background()
@@ -2001,7 +2001,7 @@ func TestLoadController(t *testing.T) {
 	is.NoErr(app.Close())
 }
 
-// https://github.com/livebud/bud/issues/135
+// https://github.com/pushthat/bud/issues/135
 func TestSameNestedName(t *testing.T) {
 	is := is.New(t)
 	ctx := context.Background()

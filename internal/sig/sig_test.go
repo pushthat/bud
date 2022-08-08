@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/livebud/bud/internal/testsub"
+	"github.com/pushthat/bud/internal/testsub"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/sig"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/sig"
 )
 
 func waitFor(r io.Reader, line string) error {

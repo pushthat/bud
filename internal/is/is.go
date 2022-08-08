@@ -3,7 +3,7 @@
 // It adds new methods commonly needed in Bud, removes indentation and replaces
 // displaying comments with optional messages that can be formatted.
 //
-// Learn more in this discussion: https://github.com/livebud/bud/discussions/86
+// Learn more in this discussion: https://github.com/pushthat/bud/discussions/86
 package is
 
 import (

@@ -7,7 +7,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	v8 "github.com/livebud/bud/package/js/v8"
+	v8 "github.com/pushthat/bud/package/js/v8"
 )
 
 func New(stdin io.Reader, stdout io.Writer) *Command {

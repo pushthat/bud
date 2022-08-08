@@ -5,11 +5,11 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/livebud/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/testdir"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/pluginfs"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/pluginfs"
 )
 
 func TestMergeModules(t *testing.T) {
@@ -18,7 +18,7 @@ func TestMergeModules(t *testing.T) {
 	dir := t.TempDir()
 	td := testdir.New(dir)
 	td.Files["public/normalize.css"] = `/* normalize */`
-	td.Modules["github.com/livebud/bud-test-plugin"] = `v0.0.8`
+	td.Modules["github.com/pushthat/bud-test-plugin"] = `v0.0.8`
 	err := td.Write(ctx)
 	is.NoErr(err)
 
@@ -114,8 +114,8 @@ func TestMultiple(t *testing.T) {
 	td := testdir.New(dir)
 
 	td.Files["public/normalize.css"] = `/* normalize */`
-	td.Modules["github.com/livebud/bud-test-plugin"] = `v0.0.9`
-	td.Modules["github.com/livebud/bud-test-nested-plugin"] = `v0.0.5`
+	td.Modules["github.com/pushthat/bud-test-plugin"] = `v0.0.9`
+	td.Modules["github.com/pushthat/bud-test-nested-plugin"] = `v0.0.5`
 	err := td.Write(ctx)
 	is.NoErr(err)
 
@@ -142,8 +142,8 @@ func TestConflicts(t *testing.T) {
 	td := testdir.New(dir)
 
 	td.Files["public/admin.css"] = `/* app admin.css */`
-	td.Modules["github.com/livebud/bud-test-plugin"] = `v0.0.9`
-	td.Modules["github.com/livebud/bud-test-nested-plugin"] = `v0.0.5`
+	td.Modules["github.com/pushthat/bud-test-plugin"] = `v0.0.9`
+	td.Modules["github.com/pushthat/bud-test-nested-plugin"] = `v0.0.5`
 	err := td.Write(ctx)
 	is.NoErr(err)
 
@@ -158,8 +158,8 @@ func TestConflicts(t *testing.T) {
 	is.Equal(string(code), `/* app admin.css */`)
 
 	// 2. Prefer modules that are higher on the list alphanumerically.
-	// In this case, `github.com/livebud/bud-test-nested-plugin` has priority over
-	// `github.com/livebud/bud-test-plugin`.
+	// In this case, `github.com/pushthat/bud-test-nested-plugin` has priority over
+	// `github.com/pushthat/bud-test-plugin`.
 	code, err = fs.ReadFile(pfs, "public/tailwind/preflight.css")
 	is.NoErr(err)
 	is.Equal(string(code), `/* conflicting preflight */`)

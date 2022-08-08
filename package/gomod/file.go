@@ -16,7 +16,7 @@ type File struct {
 	file *modfile.File
 }
 
-// Import returns the module's import path (e.g. github.com/livebud/bud)
+// Import returns the module's import path (e.g. github.com/pushthat/bud)
 func (f *File) Import(subpaths ...string) string {
 	return path.Join(append([]string{f.file.Module.Mod.Path}, subpaths...)...)
 }

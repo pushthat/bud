@@ -9,14 +9,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/livebud/bud/package/budclient"
-	"github.com/livebud/bud/package/hot"
-	"github.com/livebud/bud/package/log"
+	"github.com/pushthat/bud/package/budclient"
+	"github.com/pushthat/bud/package/hot"
+	"github.com/pushthat/bud/package/log"
 
-	"github.com/livebud/bud/internal/pubsub"
+	"github.com/pushthat/bud/internal/pubsub"
 
-	"github.com/livebud/bud/package/js"
-	"github.com/livebud/bud/package/router"
+	"github.com/pushthat/bud/package/js"
+	"github.com/pushthat/bud/package/router"
 )
 
 func New(fsys fs.FS, bus pubsub.Client, log log.Interface, vm js.VM) *Server {

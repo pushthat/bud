@@ -9,12 +9,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/cli/bud"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/internal/scaffold"
 	"github.com/matthewmueller/gotext"
 	"github.com/matthewmueller/text"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/cli/bud"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/internal/scaffold"
 )
 
 func New(bud *bud.Command, in *bud.Input) *Command {
@@ -149,7 +149,7 @@ func (c *Command) loadController() *Controller {
 	key, resource := splitKeyAndResource(c.Path)
 	// TODO: remove this constraint
 	if strings.Contains(key, "/") && hasOneOrMore(c.Actions, "index", "new") {
-		c.bail.Bail(fmt.Errorf(`scaffolding the "index" or "new" action of a nested resource like %q isn't supported yet, see https://github.com/livebud/bud/issues/209 for details`, c.Path))
+		c.bail.Bail(fmt.Errorf(`scaffolding the "index" or "new" action of a nested resource like %q isn't supported yet, see https://github.com/pushthat/bud/issues/209 for details`, c.Path))
 	}
 	controller.key = key
 	controller.path = controllerPath(key)

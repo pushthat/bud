@@ -1,7 +1,7 @@
 package txtar
 
 import (
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/package/vfs"
 	"golang.org/x/tools/txtar"
 )
 

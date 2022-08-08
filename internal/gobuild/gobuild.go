@@ -8,9 +8,9 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/livebud/bud/internal/imhash"
-	"github.com/livebud/bud/internal/symlink"
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/internal/imhash"
+	"github.com/pushthat/bud/internal/symlink"
+	"github.com/pushthat/bud/package/gomod"
 )
 
 func New(module *gomod.Module) *Builder {

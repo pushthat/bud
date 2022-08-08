@@ -3,8 +3,8 @@ package envs_test
 import (
 	"testing"
 
-	"github.com/livebud/bud/internal/envs"
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/internal/envs"
+	"github.com/pushthat/bud/internal/is"
 )
 
 func TestFrom(t *testing.T) {

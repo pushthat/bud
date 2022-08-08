@@ -16,20 +16,20 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/lithammer/dedent"
-	"github.com/livebud/bud/internal/cli/bud"
-	"github.com/livebud/bud/internal/once"
-	"github.com/livebud/bud/internal/pubsub"
 	"github.com/matthewmueller/diff"
+	"github.com/pushthat/bud/internal/cli/bud"
+	"github.com/pushthat/bud/internal/once"
+	"github.com/pushthat/bud/internal/pubsub"
 
-	"github.com/livebud/bud/package/hot"
-	"github.com/livebud/bud/package/log"
-	"github.com/livebud/bud/package/log/testlog"
-	"github.com/livebud/bud/package/socket"
+	"github.com/pushthat/bud/package/hot"
+	"github.com/pushthat/bud/package/log"
+	"github.com/pushthat/bud/package/log/testlog"
+	"github.com/pushthat/bud/package/socket"
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/livebud/bud/internal/cli"
-	"github.com/livebud/bud/internal/envs"
+	"github.com/pushthat/bud/internal/cli"
+	"github.com/pushthat/bud/internal/envs"
 )
 
 func New(dir string) *CLI {

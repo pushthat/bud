@@ -10,11 +10,11 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/livebud/bud/package/socket"
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/package/socket"
+	"github.com/pushthat/bud/package/vfs"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/package/remotefs"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/package/remotefs"
 )
 
 func listener(t *testing.T) (net.Listener, error) {

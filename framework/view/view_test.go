@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	"github.com/lithammer/dedent"
-	"github.com/livebud/bud/internal/cli/testcli"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
-	"github.com/livebud/bud/internal/versions"
+	"github.com/pushthat/bud/internal/cli/testcli"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/versions"
 )
 
 func TestHello(t *testing.T) {

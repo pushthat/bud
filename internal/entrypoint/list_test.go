@@ -3,9 +3,9 @@ package entrypoint_test
 import (
 	"testing"
 
-	"github.com/livebud/bud/internal/entrypoint"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/internal/entrypoint"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/package/vfs"
 )
 
 func TestList(t *testing.T) {

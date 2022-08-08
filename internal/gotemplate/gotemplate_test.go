@@ -3,8 +3,8 @@ package gotemplate_test
 import (
 	"testing"
 
-	"github.com/livebud/bud/internal/gotemplate"
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/internal/gotemplate"
+	"github.com/pushthat/bud/internal/is"
 )
 
 func TestGenerateGoFile(t *testing.T) {

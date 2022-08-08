@@ -10,9 +10,9 @@ import (
 	"net/rpc"
 	"path"
 
-	"github.com/livebud/bud/internal/extrafile"
-	"github.com/livebud/bud/internal/virtual"
-	"github.com/livebud/bud/package/socket"
+	"github.com/pushthat/bud/internal/extrafile"
+	"github.com/pushthat/bud/internal/virtual"
+	"github.com/pushthat/bud/package/socket"
 )
 
 // ServeFrom serves the filesystem from a listener passed in by a parent process

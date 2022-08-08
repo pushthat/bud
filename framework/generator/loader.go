@@ -5,13 +5,13 @@ import (
 	"io/fs"
 	"strings"
 
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/internal/scan"
-	"github.com/livebud/bud/internal/valid"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/parser"
 	"github.com/matthewmueller/gotext"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/internal/scan"
+	"github.com/pushthat/bud/internal/valid"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/parser"
 )
 
 func Load(fsys fs.FS, module *gomod.Module, parser *parser.Parser) (*State, error) {
@@ -83,6 +83,6 @@ func (l *loader) loadImports(generators []*Gen) []*imports.Import {
 	if len(generators) == 0 {
 		return nil
 	}
-	l.imports.AddNamed("overlay", "github.com/livebud/bud/package/overlay")
+	l.imports.AddNamed("overlay", "github.com/pushthat/bud/package/overlay")
 	return l.imports.List()
 }

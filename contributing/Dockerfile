@@ -17,7 +17,7 @@ RUN go version
 ENV PATH "/root/go/bin:${PATH}"
 
 # Install Bud
-RUN git clone https://github.com/livebud/bud /bud
+RUN git clone https://github.com/pushthat/bud /bud
 WORKDIR /bud
 RUN git checkout $BUD_VERSION
 RUN make install

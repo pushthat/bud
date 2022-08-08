@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/livebud/bud/internal/imports"
+	"github.com/pushthat/bud/internal/imports"
 )
 
 // node in the dependency injection graph

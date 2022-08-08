@@ -8,7 +8,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/livebud/bud/internal/sig"
+	"github.com/pushthat/bud/internal/sig"
 )
 
 type Command interface {

@@ -7,12 +7,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/cli/bud"
-	"github.com/livebud/bud/internal/format"
-	"github.com/livebud/bud/internal/scaffold"
-	"github.com/livebud/bud/internal/versions"
-	mod "github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/cli/bud"
+	"github.com/pushthat/bud/internal/format"
+	"github.com/pushthat/bud/internal/scaffold"
+	"github.com/pushthat/bud/internal/versions"
+	mod "github.com/pushthat/bud/package/gomod"
 	"golang.org/x/mod/modfile"
 )
 
@@ -126,7 +126,7 @@ func (c *Command) loadModule() *Module {
 	// Add the required runtime
 	module.Requires = []*Require{
 		{
-			Import:  "github.com/livebud/bud",
+			Import:  "github.com/pushthat/bud",
 			Version: c.budVersion(),
 		},
 	}
@@ -134,7 +134,7 @@ func (c *Command) loadModule() *Module {
 	if c.Dev {
 		module.Replaces = []*Replace{
 			{
-				From: "github.com/livebud/bud",
+				From: "github.com/pushthat/bud",
 				To:   modfile.AutoQuote(c.budModule.Directory()),
 			},
 		}

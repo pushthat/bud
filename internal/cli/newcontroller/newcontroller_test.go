@@ -7,10 +7,10 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/livebud/bud/internal/cli/testcli"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
-	"github.com/livebud/bud/internal/versions"
+	"github.com/pushthat/bud/internal/cli/testcli"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/versions"
 )
 
 func TestNewControllerNoActions(t *testing.T) {
@@ -276,7 +276,7 @@ func TestNewControllerAllNested(t *testing.T) {
 	cli := testcli.New(dir)
 	result, err := cli.Run(ctx, "new", "controller", "posts/comments", "index", "show", "create", "update", "delete", "edit", "new")
 	is.True(err != nil)
-	is.Equal(err.Error(), `new controller: scaffolding the "index" or "new" action of a nested resource like "posts/comments" isn't supported yet, see https://github.com/livebud/bud/issues/209 for details`)
+	is.Equal(err.Error(), `new controller: scaffolding the "index" or "new" action of a nested resource like "posts/comments" isn't supported yet, see https://github.com/pushthat/bud/issues/209 for details`)
 	is.Equal(result.Stdout(), "")
 	is.Equal(result.Stderr(), "")
 	// is.NoErr(err)

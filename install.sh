@@ -10,7 +10,7 @@ $this: download go binaries for livebud/bud
 Usage: $this [-b] bindir [version]
   -b sets bindir or installation directory, default "/usr/local/bin"
    [version] is a version number from
-   https://github.com/livebud/bud/releases
+   https://github.com/pushthat/bud/releases
    If version is missing, then an attempt to find the latest will be found.
 
 EOF
@@ -323,7 +323,7 @@ adjust_arch
 echo "$PREFIX: found version ${VERSION} for ${OS}/${ARCH}"
 
 # The tarball path should include the version for v0.1.4+
-# See: https://github.com/livebud/bud/issues/52
+# See: https://github.com/pushthat/bud/issues/52
 case "$VERSION" in
 0.0.[0-9]* | 0.1.[0-3])
 NAME=${BINARY}_${OS}_${ARCH}

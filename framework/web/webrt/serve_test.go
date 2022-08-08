@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/livebud/bud/framework/web/webrt"
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/framework/web/webrt"
+	"github.com/pushthat/bud/internal/is"
 	"golang.org/x/sync/errgroup"
 )
 

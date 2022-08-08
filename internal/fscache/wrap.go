@@ -3,7 +3,7 @@ package fscache
 import (
 	"io/fs"
 
-	"github.com/livebud/bud/package/log"
+	"github.com/pushthat/bud/package/log"
 )
 
 func Wrap(fsys fs.FS, log log.Interface, fsname string) *WrapFS {

@@ -4,7 +4,7 @@ Thank you for your interest in helping to make Bud better! Bud is and forever wi
 
 ## Requirements
 
-- OSX, Linux or Windows (via [WSL2](https://github.com/livebud/bud/issues/7))
+- OSX, Linux or Windows (via [WSL2](https://github.com/pushthat/bud/issues/7))
 - Node 16+
 - Go 1.17+
 - C++ compiler in your $PATH (for cgo to compile V8)
@@ -14,7 +14,7 @@ Thank you for your interest in helping to make Bud better! Bud is and forever wi
 Run the following commands to download and run Bud locally:
 
 ```sh
-git clone https://github.com/livebud/bud
+git clone https://github.com/pushthat/bud
 cd bud
 make install # fresh installs take a few minutes because of V8
 go run main.go
@@ -37,7 +37,7 @@ After running `go run main.go`, you should see the following:
     version  Show package versions
 ```
 
-If you run into any problems, please [open an issue](https://github.com/livebud/bud/issues/new).
+If you run into any problems, please [open an issue](https://github.com/pushthat/bud/issues/new).
 
 ### Developing with Docker
 
@@ -115,7 +115,7 @@ Finally, reload the page and you should be good to go. Happy hacking!
 
 ## Issues to Work On
 
-Issues with the [good first issue]() or [help wanted](https://github.com/livebud/bud/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) labels would be good candidates to work on.
+Issues with the [good first issue]() or [help wanted](https://github.com/pushthat/bud/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) labels would be good candidates to work on.
 
 ## Running Tests
 
@@ -137,4 +137,4 @@ You can run then run:
 
 ## Note for Developing with Bud on Windows
 
-Currently, Bud must be developed using WSL/WSL2 if developing on Windows. While there is a desire to get native Windows development supported, the effort to get there will be a HEAVY lift, as we will need to work closely with the [v8go](https://github.com/rogchap/v8go) team to get their Windows support added back in to v8go, as well as a handful of other large effort-intensive tasks, such as finding a consistent way to identify file descriptors in Windows. There are some efforts working towards accomplishing these goals, but as they are such large tasks, it has been decided that they will be placed on the back burner. If anyone wants to contribute to these efforts, you can find a beginning list of tasks [here](https://github.com/livebud/bud/discussions/81).
+Currently, Bud must be developed using WSL/WSL2 if developing on Windows. While there is a desire to get native Windows development supported, the effort to get there will be a HEAVY lift, as we will need to work closely with the [v8go](https://github.com/rogchap/v8go) team to get their Windows support added back in to v8go, as well as a handful of other large effort-intensive tasks, such as finding a consistent way to identify file descriptors in Windows. There are some efforts working towards accomplishing these goals, but as they are such large tasks, it has been decided that they will be placed on the back burner. If anyone wants to contribute to these efforts, you can find a beginning list of tasks [here](https://github.com/pushthat/bud/discussions/81).

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/once"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/once"
 )
 
 func TestBytesNil(t *testing.T) {

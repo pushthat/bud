@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/livebud/bud/internal/urlx"
+	"github.com/pushthat/bud/internal/urlx"
 )
 
 type Listener interface {

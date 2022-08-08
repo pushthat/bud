@@ -4,8 +4,8 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/livebud/bud/internal/gitignore"
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/internal/gitignore"
+	"github.com/pushthat/bud/internal/is"
 )
 
 func TestBudRoot(t *testing.T) {

@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/package/gomod"
 )
 
 // New Go parser.

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/livebud/bud/internal/gois"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/parser"
+	"github.com/pushthat/bud/internal/gois"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/parser"
 )
 
 // Struct is a dependency that can be defined in memory. Struct is also a

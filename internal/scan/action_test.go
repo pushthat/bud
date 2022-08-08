@@ -5,10 +5,10 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/scan"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/scan"
 
-	"github.com/livebud/bud/package/vfs"
+	"github.com/pushthat/bud/package/vfs"
 )
 
 func TestControllerScan(t *testing.T) {

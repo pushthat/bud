@@ -1,6 +1,6 @@
 package generator
 
-import "github.com/livebud/bud/internal/imports"
+import "github.com/pushthat/bud/internal/imports"
 
 type State struct {
 	Imports    []*imports.Import

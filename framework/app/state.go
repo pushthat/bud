@@ -1,9 +1,9 @@
 package app
 
 import (
-	"github.com/livebud/bud/framework"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/di"
+	"github.com/pushthat/bud/framework"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/di"
 )
 
 type State struct {

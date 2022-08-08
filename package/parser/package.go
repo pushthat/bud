@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"github.com/livebud/bud/package/gomod"
+	"github.com/pushthat/bud/package/gomod"
 )
 
 // newPackage creates a new package

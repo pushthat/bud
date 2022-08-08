@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/livebud/bud/framework/view/ssr"
+	"github.com/pushthat/bud/framework/view/ssr"
 )
 
 // Discard client implements Client

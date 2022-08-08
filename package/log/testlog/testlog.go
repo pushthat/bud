@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/livebud/bud/package/log/filter"
+	"github.com/pushthat/bud/package/log/filter"
 
-	"github.com/livebud/bud/package/log"
-	"github.com/livebud/bud/package/log/console"
+	"github.com/pushthat/bud/package/log"
+	"github.com/pushthat/bud/package/log/console"
 )
 
 var pattern = flag.String("log", "info", "choose a log level")

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"io/fs"
 
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/log"
-	"github.com/livebud/bud/package/parser"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/log"
+	"github.com/pushthat/bud/package/parser"
 )
 
 func New(fsys fs.FS, log log.Interface, module *gomod.Module, parser *parser.Parser) *Injector {

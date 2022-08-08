@@ -5,14 +5,14 @@ import (
 	"path"
 	"strings"
 
-	"github.com/livebud/bud/internal/scan"
+	"github.com/pushthat/bud/internal/scan"
 
-	"github.com/livebud/bud/internal/bail"
-	"github.com/livebud/bud/internal/imports"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/parser"
-	"github.com/livebud/bud/package/vfs"
 	"github.com/matthewmueller/text"
+	"github.com/pushthat/bud/internal/bail"
+	"github.com/pushthat/bud/internal/imports"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/parser"
+	"github.com/pushthat/bud/package/vfs"
 )
 
 func Load(fsys fs.FS, module *gomod.Module, parser *parser.Parser) (*State, error) {
@@ -48,14 +48,14 @@ func (l *loader) Load() (state *State, err error) {
 	}
 	// Add initial imports
 	l.imports.AddStd("net/http", "context")
-	l.imports.AddNamed("middleware", "github.com/livebud/bud/package/middleware")
-	l.imports.AddNamed("webrt", "github.com/livebud/bud/framework/web/webrt")
-	l.imports.AddNamed("router", "github.com/livebud/bud/package/router")
+	l.imports.AddNamed("middleware", "github.com/pushthat/bud/package/middleware")
+	l.imports.AddNamed("webrt", "github.com/pushthat/bud/framework/web/webrt")
+	l.imports.AddNamed("router", "github.com/pushthat/bud/package/router")
 	l.imports.Add("github.com/aws/aws-lambda-go/lambda")
 	l.imports.Add("github.com/awslabs/aws-lambda-go-api-proxy/httpadapter")
 	// Show the welcome page if we don't have controllers, views or public files
 	if len(exist) == 0 {
-		l.imports.AddNamed("welcome", "github.com/livebud/bud/framework/web/welcome")
+		l.imports.AddNamed("welcome", "github.com/pushthat/bud/framework/web/welcome")
 		state.ShowWelcome = true
 		state.Imports = l.imports.List()
 		return state, nil

@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/livebud/bud/framework/view/ssr"
-	"github.com/livebud/bud/package/budclient"
-	"github.com/livebud/bud/package/js"
+	"github.com/pushthat/bud/framework/view/ssr"
+	"github.com/pushthat/bud/package/budclient"
+	"github.com/pushthat/bud/package/js"
 )
 
 type Server interface {

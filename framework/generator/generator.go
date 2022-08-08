@@ -4,10 +4,10 @@ import (
 	"context"
 	_ "embed"
 
-	"github.com/livebud/bud/internal/gotemplate"
-	"github.com/livebud/bud/package/gomod"
-	"github.com/livebud/bud/package/overlay"
-	"github.com/livebud/bud/package/parser"
+	"github.com/pushthat/bud/internal/gotemplate"
+	"github.com/pushthat/bud/package/gomod"
+	"github.com/pushthat/bud/package/overlay"
+	"github.com/pushthat/bud/package/parser"
 )
 
 //go:embed generator.gotext

@@ -3,8 +3,8 @@ package fstree_test
 import (
 	"testing"
 
-	"github.com/livebud/bud/internal/fstree"
-	"github.com/livebud/bud/internal/is"
+	"github.com/pushthat/bud/internal/fstree"
+	"github.com/pushthat/bud/internal/is"
 )
 
 func TestTree(t *testing.T) {

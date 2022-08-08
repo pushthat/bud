@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/livebud/bud/internal/sig"
+	"github.com/pushthat/bud/internal/sig"
 )
 
 func main() {

@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/livebud/bud/internal/cli/testcli"
-	"github.com/livebud/bud/internal/is"
-	"github.com/livebud/bud/internal/testdir"
+	"github.com/pushthat/bud/internal/cli/testcli"
+	"github.com/pushthat/bud/internal/is"
+	"github.com/pushthat/bud/internal/testdir"
 )
 
 func TestWelcome(t *testing.T) {

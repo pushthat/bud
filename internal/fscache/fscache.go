@@ -20,7 +20,7 @@ import (
 	"path"
 	"sync"
 
-	"github.com/livebud/bud/package/log"
+	"github.com/pushthat/bud/package/log"
 )
 
 func New(log log.Interface) *Cache {

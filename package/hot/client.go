@@ -10,9 +10,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/livebud/bud/internal/errs"
-	"github.com/livebud/bud/internal/once"
-	"github.com/livebud/bud/package/log"
+	"github.com/pushthat/bud/internal/errs"
+	"github.com/pushthat/bud/internal/once"
+	"github.com/pushthat/bud/package/log"
 )
 
 // Dial creates a server-sent event (SSE) stream. This stream has been adapted

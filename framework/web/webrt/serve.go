@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/livebud/bud/internal/extrafile"
-	"github.com/livebud/bud/internal/sig"
-	"github.com/livebud/bud/package/socket"
+	"github.com/pushthat/bud/internal/extrafile"
+	"github.com/pushthat/bud/internal/sig"
+	"github.com/pushthat/bud/package/socket"
 )
 
 // listen first tries pulling the connection from a passed in file descriptor.
