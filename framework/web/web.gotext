@@ -11,6 +11,11 @@ import (
 )
 {{- end }}
 
+func NotFoundHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL)
+	http.Error(w, "404 page not found", http.StatusNotFound)
+}
+
 // New web server
 func New(
 	router *router.Router,
@@ -48,7 +53,7 @@ func New(
 		{{- end }}
 	)
 	// 404 at the bottom of the middleware
-	handler := middleware.Middleware(http.NotFoundHandler())
+	handler := middleware.Middleware(http.HandlerFunc(NotFoundHandler))
 	return &Server{handler}
 }
 
