@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/pushthat/bud/framework/view/ssr"
-	"github.com/pushthat/bud/internal/urlx"
-	"github.com/pushthat/bud/package/socket"
+	"github.com/livebud/bud/framework/view/ssr"
+	"github.com/livebud/bud/internal/urlx"
+	"github.com/livebud/bud/package/socket"
 )
 
 type Client interface {

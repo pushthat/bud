@@ -11,13 +11,13 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/pushthat/bud/internal/versions"
+	"github.com/livebud/bud/internal/versions"
 
 	"github.com/cespare/xxhash"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/parser"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/parser"
 )
 
 func find(module *gomod.Module, mainDir string) (*fileSet, error) {
@@ -190,7 +190,7 @@ func shouldWalk(module *gomod.Module, importPath string) bool {
 		return true
 	}
 	// Search livebud if we're in development, otherwise skip it
-	if versions.Bud == "latest" && strings.HasPrefix(importPath, "github.com/pushthat/bud") {
+	if versions.Bud == "latest" && strings.HasPrefix(importPath, "github.com/livebud/bud") {
 		return true
 	}
 	return false

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pushthat/bud/internal/gois"
-	"github.com/pushthat/bud/internal/imports"
-	"github.com/pushthat/bud/package/parser"
+	"github.com/livebud/bud/internal/gois"
+	"github.com/livebud/bud/internal/imports"
+	"github.com/livebud/bud/package/parser"
 )
 
 type Param struct {

@@ -4,10 +4,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/pushthat/bud/internal/npm"
-	"github.com/pushthat/bud/internal/versions"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/log/console"
+	"github.com/livebud/bud/internal/npm"
+	"github.com/livebud/bud/internal/versions"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/log/console"
 )
 
 func main() {

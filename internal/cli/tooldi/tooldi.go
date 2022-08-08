@@ -6,12 +6,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/pushthat/bud/internal/cli/bud"
-	"github.com/pushthat/bud/internal/imports"
-	"github.com/pushthat/bud/package/di"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/overlay"
-	"github.com/pushthat/bud/package/parser"
+	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/livebud/bud/internal/imports"
+	"github.com/livebud/bud/package/di"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/overlay"
+	"github.com/livebud/bud/package/parser"
 )
 
 func New(bud *bud.Command, in *bud.Input) *Command {

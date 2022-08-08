@@ -15,7 +15,7 @@ import (
 
 	"github.com/bep/debounce"
 	"github.com/fsnotify/fsnotify"
-	"github.com/pushthat/bud/internal/gitignore"
+	"github.com/livebud/bud/internal/gitignore"
 )
 
 var Stop = errors.New("stop watching")

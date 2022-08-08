@@ -4,19 +4,20 @@
 //
 // When there are conflicts, bud prefers your local files over module
 // files. When there are conflicts between modules, bud prioritizes modules that
-// are alphanumerically higher. For example: github.com/pushthat/bud-tailwind <
-// github.com/pushthat/bud-preflight.
+// are alphanumerically higher. For example: github.com/livebud/bud-tailwind <
+// github.com/livebud/bud-preflight.
 //
 // The plugin system doesn't recursively load or merge indirect dependencies.
 package pluginfs
 
 import (
-	"io/fs"
 	"path"
 	"strings"
 
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/merged"
+	"io/fs"
+
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/merged"
 	"golang.org/x/sync/errgroup"
 )
 

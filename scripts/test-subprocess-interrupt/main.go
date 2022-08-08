@@ -7,8 +7,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/pushthat/bud/internal/current"
-	"github.com/pushthat/bud/internal/sig"
+	"github.com/livebud/bud/internal/current"
+	"github.com/livebud/bud/internal/sig"
 )
 
 func main() {

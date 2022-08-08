@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/npm"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/npm"
 )
 
 func exists(t testing.TB, path string) {

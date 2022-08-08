@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pushthat/bud/internal/pubsub"
-	"github.com/pushthat/bud/package/log"
+	"github.com/livebud/bud/internal/pubsub"
+	"github.com/livebud/bud/package/log"
 )
 
 // New server-sent event (SSE) server

@@ -4,9 +4,9 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/pushthat/bud/internal/dirhash"
-	"github.com/pushthat/bud/internal/gitignore"
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/dirhash"
+	"github.com/livebud/bud/internal/gitignore"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestHash(t *testing.T) {

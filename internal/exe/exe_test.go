@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pushthat/bud/internal/exe"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/sig"
-	"github.com/pushthat/bud/internal/testsub"
+	"github.com/livebud/bud/internal/exe"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/sig"
+	"github.com/livebud/bud/internal/testsub"
 )
 
 func TestCancel(t *testing.T) {

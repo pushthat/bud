@@ -6,10 +6,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/pushthat/bud/internal/current"
+	"github.com/livebud/bud/internal/current"
 
-	"github.com/pushthat/bud/internal/sig"
-	"github.com/pushthat/bud/package/watcher"
+	"github.com/livebud/bud/internal/sig"
+	"github.com/livebud/bud/package/watcher"
 )
 
 func run(ctx context.Context) error {

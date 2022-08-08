@@ -5,9 +5,9 @@ import (
 	"errors"
 	"os"
 
-	"github.com/pushthat/bud/internal/cli"
-	"github.com/pushthat/bud/internal/cli/bud"
-	"github.com/pushthat/bud/package/log/console"
+	"github.com/livebud/bud/internal/cli"
+	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/livebud/bud/package/log/console"
 )
 
 //go:generate go run scripts/set-package-json/main.go

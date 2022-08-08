@@ -2,7 +2,6 @@ package conjure_test
 
 import (
 	"errors"
-	"io/fs"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -14,9 +13,11 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/conjure"
-	"github.com/pushthat/bud/package/merged"
+	"io/fs"
+
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/conjure"
+	"github.com/livebud/bud/package/merged"
 )
 
 func View() func(dir *conjure.Dir) error {

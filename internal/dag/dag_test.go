@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pushthat/bud/internal/dag"
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/dag"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestRemove(t *testing.T) {

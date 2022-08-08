@@ -13,20 +13,20 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/pushthat/bud/internal/dirhash"
-	"github.com/pushthat/bud/internal/gitignore"
+	"github.com/livebud/bud/internal/dirhash"
+	"github.com/livebud/bud/internal/gitignore"
 
-	"github.com/pushthat/bud/internal/current"
+	"github.com/livebud/bud/internal/current"
 
-	"github.com/pushthat/bud/internal/fstree"
+	"github.com/livebud/bud/internal/fstree"
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/pushthat/bud/internal/snapshot"
+	"github.com/livebud/bud/internal/snapshot"
 
-	"github.com/pushthat/bud/internal/npm"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/modcache"
+	"github.com/livebud/bud/internal/npm"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/modcache"
 	"golang.org/x/mod/modfile"
 )
 
@@ -34,7 +34,7 @@ const goMod = `
 	module app.com
 
 	require (
-		github.com/pushthat/bud v0.0.0
+		github.com/livebud/bud v0.0.0
 	)
 `
 
@@ -125,7 +125,7 @@ func (d *Dir) mapfs() (fstest.MapFS, error) {
 	if err != nil {
 		return nil, err
 	}
-	modFile.AddReplace("github.com/pushthat/bud", "", budDir, "")
+	modFile.AddReplace("github.com/livebud/bud", "", budDir, "")
 	// Add requires to go.mod
 	for path, version := range d.Modules {
 		if err := modFile.AddRequire(path, version); err != nil {

@@ -1,6 +1,6 @@
 package router
 
-import "github.com/pushthat/bud/package/router/lex"
+import "github.com/livebud/bud/package/router/lex"
 
 func Parse(route string) (tokens []lex.Token) {
 	lexer := lex.New(route)

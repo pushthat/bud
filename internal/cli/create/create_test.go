@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 	"golang.org/x/mod/modfile"
 )
 
@@ -45,8 +45,8 @@ func TestCreateOutsideGoPathModulePath(t *testing.T) {
 
 func TestAutoQuote(t *testing.T) {
 	is := is.New(t)
-	actual := modfile.AutoQuote(`github.com/pushthat/bud`)
-	is.Equal(actual, `github.com/pushthat/bud`)
-	actual = modfile.AutoQuote(`github.com/pushthat/bud with spaces`)
-	is.Equal(actual, `"github.com/pushthat/bud with spaces"`)
+	actual := modfile.AutoQuote(`github.com/livebud/bud`)
+	is.Equal(actual, `github.com/livebud/bud`)
+	actual = modfile.AutoQuote(`github.com/livebud/bud with spaces`)
+	is.Equal(actual, `"github.com/livebud/bud with spaces"`)
 }

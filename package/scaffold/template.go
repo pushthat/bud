@@ -5,8 +5,8 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/pushthat/bud/internal/gotemplate"
-	"github.com/pushthat/bud/package/vfs"
+	"github.com/livebud/bud/internal/gotemplate"
+	"github.com/livebud/bud/package/vfs"
 	"golang.org/x/sync/errgroup"
 )
 

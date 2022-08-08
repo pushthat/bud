@@ -6,8 +6,8 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/pushthat/bud/internal/errs"
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/errs"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestNil(t *testing.T) {

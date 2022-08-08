@@ -6,11 +6,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/pushthat/bud/internal/extrafile"
+	"github.com/livebud/bud/internal/extrafile"
 
-	"github.com/pushthat/bud/package/exe"
+	"github.com/livebud/bud/package/exe"
 
-	"github.com/pushthat/bud/package/js/v8server"
+	"github.com/livebud/bud/package/js/v8server"
 )
 
 func run(ctx context.Context) error {

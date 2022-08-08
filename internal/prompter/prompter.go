@@ -28,8 +28,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pushthat/bud/package/log/console"
-	"github.com/pushthat/bud/package/watcher"
+	"github.com/livebud/bud/package/log/console"
+	"github.com/livebud/bud/package/watcher"
 )
 
 // States

@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/pushthat/bud/internal/dirhash"
-	"github.com/pushthat/bud/internal/targz"
+	"github.com/livebud/bud/internal/dirhash"
+	"github.com/livebud/bud/internal/targz"
 
 	"github.com/cespare/xxhash"
 )

@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/middleware"
-	"github.com/pushthat/bud/package/router"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/middleware"
+	"github.com/livebud/bud/package/router"
 )
 
 func ok() http.Handler {

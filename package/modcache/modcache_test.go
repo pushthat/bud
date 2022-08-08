@@ -9,10 +9,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/testdir"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/modcache"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/modcache"
 )
 
 // Run calls `go run -mod=mod main.go ...`
@@ -51,10 +51,10 @@ func TestResolveDirectoryFromCache(t *testing.T) {
 	ctx := context.Background()
 	dir := t.TempDir()
 	td := testdir.New(dir)
-	td.Modules["github.com/pushthat/bud-test-plugin"] = "v0.0.8"
+	td.Modules["github.com/livebud/bud-test-plugin"] = "v0.0.8"
 	is.NoErr(td.Write(ctx))
 	modCache := modcache.Default()
-	dir, err := modCache.ResolveDirectory("github.com/pushthat/bud-test-plugin", "v0.0.8")
+	dir, err := modCache.ResolveDirectory("github.com/livebud/bud-test-plugin", "v0.0.8")
 	is.NoErr(err)
 	is.Equal(dir, modCache.Directory(`github.com/livebud`, `bud-test-plugin@v0.0.8`))
 }
@@ -182,18 +182,18 @@ func TestResolveDirectoryFromCache(t *testing.T) {
 // 	cacheDir := t.TempDir()
 // 	modCache := modcache.New(cacheDir)
 // 	err := modCache.Write(map[string]modcache.Files{
-// 		"github.com/pushthat/bud-tailwind@v0.0.1": modcache.Files{
+// 		"github.com/livebud/bud-tailwind@v0.0.1": modcache.Files{
 // 			"public/tailwind/preflight.css": `/* tailwind */`,
 // 		},
 // 	})
 // 	is.NoErr(err)
-// 	dir, err := modCache.ResolveDirectory("github.com/pushthat/bud-tailwind", "v0.0.1")
+// 	dir, err := modCache.ResolveDirectory("github.com/livebud/bud-tailwind", "v0.0.1")
 // 	is.NoErr(err)
-// 	is.Equal(dir, modCache.Directory("github.com/pushthat/bud-tailwind@v0.0.1"))
+// 	is.Equal(dir, modCache.Directory("github.com/livebud/bud-tailwind@v0.0.1"))
 // 	cacheDir2 := t.TempDir()
 // 	modCache2 := modcache.New(cacheDir2)
 // 	// Verify modcache2 doesn't have the module
-// 	dir, err = modCache2.ResolveDirectory("github.com/pushthat/bud-tailwind", "v0.0.1")
+// 	dir, err = modCache2.ResolveDirectory("github.com/livebud/bud-tailwind", "v0.0.1")
 // 	is.Equal(dir, "")
 // 	is.True(errors.Is(err, fs.ErrNotExist))
 // 	// Export to a new location
@@ -204,7 +204,7 @@ func TestResolveDirectoryFromCache(t *testing.T) {
 // 	err = modCache2.Import(tmpDir)
 // 	is.NoErr(err)
 // 	// Try again
-// 	dir, err = modCache2.ResolveDirectory("github.com/pushthat/bud-tailwind", "v0.0.1")
+// 	dir, err = modCache2.ResolveDirectory("github.com/livebud/bud-tailwind", "v0.0.1")
 // 	is.NoErr(err)
-// 	is.Equal(dir, modCache2.Directory("github.com/pushthat/bud-tailwind@v0.0.1"))
+// 	is.Equal(dir, modCache2.Directory("github.com/livebud/bud-tailwind@v0.0.1"))
 // }

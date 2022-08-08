@@ -10,10 +10,10 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/pushthat/bud/internal/exe"
+	"github.com/livebud/bud/internal/exe"
 
-	"github.com/pushthat/bud/internal/extrafile"
-	"github.com/pushthat/bud/package/socket"
+	"github.com/livebud/bud/internal/extrafile"
+	"github.com/livebud/bud/package/socket"
 )
 
 func main() {

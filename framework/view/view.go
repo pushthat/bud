@@ -4,11 +4,11 @@ import (
 	"context"
 	_ "embed"
 
-	"github.com/pushthat/bud/framework"
-	"github.com/pushthat/bud/framework/transform/transformrt"
-	"github.com/pushthat/bud/internal/gotemplate"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/overlay"
+	"github.com/livebud/bud/framework"
+	"github.com/livebud/bud/framework/transform/transformrt"
+	"github.com/livebud/bud/internal/gotemplate"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/overlay"
 )
 
 //go:embed view.gotext

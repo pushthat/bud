@@ -2,9 +2,9 @@ module github.com/go-duo/bud/example/basic
 
 go 1.18
 
-replace github.com/pushthat/bud => ../..
+replace github.com/livebud/bud => ../..
 
-require github.com/pushthat/bud v0.2.1
+require github.com/livebud/bud v0.2.1
 
 require (
 	github.com/ajg/form v1.5.2-0.20200323032839-9aeb3cf462e1 // indirect

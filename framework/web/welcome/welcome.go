@@ -6,7 +6,7 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/pushthat/bud/package/middleware"
+	"github.com/livebud/bud/package/middleware"
 )
 
 // Files are built in https://github.com/livebud/welcome and manually copied

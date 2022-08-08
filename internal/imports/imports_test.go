@@ -3,8 +3,8 @@ package imports_test
 import (
 	"testing"
 
-	"github.com/pushthat/bud/internal/imports"
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/imports"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestAdd(t *testing.T) {

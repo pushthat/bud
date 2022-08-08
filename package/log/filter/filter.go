@@ -1,7 +1,7 @@
 package filter
 
 import (
-	"github.com/pushthat/bud/package/log"
+	"github.com/livebud/bud/package/log"
 )
 
 // Load console handler

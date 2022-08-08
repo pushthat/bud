@@ -3,7 +3,7 @@ package overlay
 import (
 	"context"
 
-	"github.com/pushthat/bud/package/conjure"
+	"github.com/livebud/bud/package/conjure"
 )
 
 type DirGenerator interface {

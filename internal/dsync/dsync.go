@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/pushthat/bud/internal/dsync/set"
-	"github.com/pushthat/bud/package/vfs"
+	"github.com/livebud/bud/internal/dsync/set"
+	"github.com/livebud/bud/package/vfs"
 )
 
 type skipFunc = func(name string, isDir bool) bool

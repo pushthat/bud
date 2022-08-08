@@ -15,10 +15,10 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/pushthat/bud/internal/extrafile"
+	"github.com/livebud/bud/internal/extrafile"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/socket"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/socket"
 )
 
 func TestNoFiles(t *testing.T) {

@@ -14,7 +14,7 @@ Read [the documentation](https://denim-cub-301.notion.site/Hey-Bud-4d81622cc4994
 
 # Installing Bud
 
-Bud ships as a single binary that runs on Linux and Mac. You can follow along for Windows support in [this issue](https://github.com/pushthat/bud/issues/7).
+Bud ships as a single binary that runs on Linux and Mac. You can follow along for Windows support in [this issue](https://github.com/livebud/bud/issues/7).
 
 The easiest way to get started is by copying and pasting the command below in your terminal:
 
@@ -53,7 +53,7 @@ The following software is required to use Bud.
 
 - Node v14+
 
-  This is a temporary requirement that we plan to remove in [v0.3](https://github.com/pushthat/bud/discussions/21)
+  This is a temporary requirement that we plan to remove in [v0.3](https://github.com/livebud/bud/discussions/21)
 
 - Go v1.17+
 
@@ -113,7 +113,7 @@ The goals are now:
 
 - Generate files only as you need them. Keep these generated files away from your application code and give developers the choice to keep them out of source control. You shouldn't need to care about the generated code. You may be surprised to learn that Go also generates code to turn your Go code into an executable, but it works so well you don't need to think about it. Bud should feel like this.
 
-- Feel like using a modern JS framework. This means it should work with [multiple](https://github.com/pushthat/bud/discussions/8) modern frontend frameworks like [Svelte](https://svelte.dev/) and [React](https://reactjs.org/), support [live reload](https://denim-cub-301.notion.site/Hey-Bud-4d81622cc49942f9917c5033e5205c69#4c7dff15ef3e458587b81fb9b1819afb), and have [server-side rendering](https://www.reddit.com/r/golang/comments/uoxocj/bud_the_fullstack_web_framework_for_go_developers/i8ke92h/?utm_source=reddit&utm_medium=web2x&context=3) for better performance and SEO.
+- Feel like using a modern JS framework. This means it should work with [multiple](https://github.com/livebud/bud/discussions/8) modern frontend frameworks like [Svelte](https://svelte.dev/) and [React](https://reactjs.org/), support [live reload](https://denim-cub-301.notion.site/Hey-Bud-4d81622cc49942f9917c5033e5205c69#4c7dff15ef3e458587b81fb9b1819afb), and have [server-side rendering](https://www.reddit.com/r/golang/comments/uoxocj/bud_the_fullstack_web_framework_for_go_developers/i8ke92h/?utm_source=reddit&utm_medium=web2x&context=3) for better performance and SEO.
 
 - The framework should be extensible from Day 1. Bud is too ambitious for one person. We're going to need an ambitious community behind this framework. Extensibility should be primarily driven by adding code, rather than by adding configuration.
 

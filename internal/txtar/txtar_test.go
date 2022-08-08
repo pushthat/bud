@@ -4,8 +4,8 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/txtar"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/txtar"
 )
 
 func TestParseFile(t *testing.T) {

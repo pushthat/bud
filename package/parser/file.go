@@ -5,7 +5,7 @@ import (
 	"go/ast"
 	"strconv"
 
-	"github.com/pushthat/bud/internal/imports"
+	"github.com/livebud/bud/internal/imports"
 )
 
 // File struct

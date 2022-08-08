@@ -6,17 +6,17 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pushthat/bud/package/conjure"
-	"github.com/pushthat/bud/package/merged"
+	"github.com/livebud/bud/package/conjure"
+	"github.com/livebud/bud/package/merged"
 
-	"github.com/pushthat/bud/package/modcache"
-	"github.com/pushthat/bud/package/parser"
+	"github.com/livebud/bud/package/modcache"
+	"github.com/livebud/bud/package/parser"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
-	"github.com/pushthat/bud/internal/txtar"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/vfs"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
+	"github.com/livebud/bud/internal/txtar"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/vfs"
 )
 
 // TODO: replace txtar with testdir
@@ -192,14 +192,14 @@ func TestGenerate(t *testing.T) {
 	ctx := context.Background()
 	dir := t.TempDir()
 	td := testdir.New(dir)
-	td.Modules["github.com/pushthat/bud-test-plugin"] = `v0.0.8`
+	td.Modules["github.com/livebud/bud-test-plugin"] = `v0.0.8`
 	is.NoErr(td.Write(ctx))
 	cfs := conjure.New()
 	merged := merged.Merge(os.DirFS(dir), cfs)
 	cfs.GenerateFile("hello/hello.go", func(file *conjure.File) error {
 		file.Data = []byte(`
 			package hello
-			import plugin "github.com/pushthat/bud-test-plugin"
+			import plugin "github.com/livebud/bud-test-plugin"
 			type A struct { plugin.Answer }
 		`)
 		return nil
@@ -226,7 +226,7 @@ func TestGenerate(t *testing.T) {
 	is.Equal(pkg.Name(), "plugin")
 	importPath, err := pkg.Import()
 	is.NoErr(err)
-	is.Equal(importPath, "github.com/pushthat/bud-test-plugin")
+	is.Equal(importPath, "github.com/livebud/bud-test-plugin")
 	alias := pkg.Alias("Answer")
 	is.True(alias != nil)
 	is.Equal(alias.Name(), "Answer")
@@ -237,7 +237,7 @@ func TestGenerate(t *testing.T) {
 	is.Equal(pkg.Name(), "plugin")
 	importPath, err = pkg.Import()
 	is.NoErr(err)
-	is.Equal(importPath, "github.com/pushthat/bud-test-nested-plugin")
+	is.Equal(importPath, "github.com/livebud/bud-test-nested-plugin")
 	alias = pkg.Alias("Answer")
 	is.True(alias != nil)
 	is.Equal(alias.Name(), "Answer")

@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pushthat/bud/internal/current"
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/current"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestDir(t *testing.T) {

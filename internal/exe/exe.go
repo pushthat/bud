@@ -7,7 +7,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/pushthat/bud/internal/once"
+	"github.com/livebud/bud/internal/once"
 )
 
 type Command struct {

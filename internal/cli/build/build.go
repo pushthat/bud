@@ -3,10 +3,10 @@ package build
 import (
 	"context"
 
-	"github.com/pushthat/bud/framework"
-	"github.com/pushthat/bud/internal/cli/bud"
-	"github.com/pushthat/bud/internal/gobuild"
-	"github.com/pushthat/bud/internal/versions"
+	"github.com/livebud/bud/framework"
+	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/livebud/bud/internal/gobuild"
+	"github.com/livebud/bud/internal/versions"
 )
 
 // New command for bud build

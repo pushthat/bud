@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/socket"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/socket"
 )
 
 func TestLoadTCP(t *testing.T) {

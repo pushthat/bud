@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/imhash"
-	"github.com/pushthat/bud/internal/testdir"
-	"github.com/pushthat/bud/package/gomod"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/imhash"
+	"github.com/livebud/bud/internal/testdir"
+	"github.com/livebud/bud/package/gomod"
 
-	"github.com/pushthat/bud/internal/is"
+	"github.com/livebud/bud/internal/is"
 )
 
 func TestAppHash(t *testing.T) {

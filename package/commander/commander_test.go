@@ -11,9 +11,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/commander"
 	"github.com/matthewmueller/diff"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/commander"
 )
 
 func isEqual(t testing.TB, actual, expected string) {

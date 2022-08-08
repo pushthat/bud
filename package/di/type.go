@@ -1,8 +1,8 @@
 package di
 
 import (
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/parser"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/parser"
 )
 
 type Type struct {

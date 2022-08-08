@@ -3,11 +3,12 @@ package svelte
 //go:generate go run github.com/evanw/esbuild/cmd/esbuild compiler.ts --format=iife --global-name=__svelte__ --bundle --platform=node --inject:shimssr.ts --external:url --outfile=compiler.js --log-level=warning
 
 import (
-	_ "embed"
 	"encoding/json"
 	"fmt"
 
-	"github.com/pushthat/bud/package/js"
+	_ "embed"
+
+	"github.com/livebud/bud/package/js"
 )
 
 // compiler.js is used to compile .svelte files into JS & CSS

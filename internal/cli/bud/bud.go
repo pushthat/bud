@@ -8,41 +8,41 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/pushthat/bud/internal/gobuild"
+	"github.com/livebud/bud/internal/gobuild"
 
-	"github.com/pushthat/bud/internal/extrafile"
+	"github.com/livebud/bud/internal/extrafile"
 
-	"github.com/pushthat/bud/internal/current"
-	"github.com/pushthat/bud/internal/errs"
-	"github.com/pushthat/bud/internal/exe"
-	"github.com/pushthat/bud/internal/pubsub"
+	"github.com/livebud/bud/internal/current"
+	"github.com/livebud/bud/internal/errs"
+	"github.com/livebud/bud/internal/exe"
+	"github.com/livebud/bud/internal/pubsub"
 	"golang.org/x/mod/semver"
 
-	"github.com/pushthat/bud/framework"
-	"github.com/pushthat/bud/framework/app"
-	"github.com/pushthat/bud/framework/controller"
-	"github.com/pushthat/bud/framework/generate"
-	"github.com/pushthat/bud/framework/generator"
-	"github.com/pushthat/bud/framework/public"
-	"github.com/pushthat/bud/framework/transform/transformrt"
-	"github.com/pushthat/bud/framework/view"
-	"github.com/pushthat/bud/framework/view/dom"
-	"github.com/pushthat/bud/framework/view/ssr"
-	"github.com/pushthat/bud/framework/web"
-	"github.com/pushthat/bud/package/commander"
-	"github.com/pushthat/bud/package/di"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/js"
-	v8 "github.com/pushthat/bud/package/js/v8"
-	"github.com/pushthat/bud/package/log"
-	"github.com/pushthat/bud/package/log/console"
-	"github.com/pushthat/bud/package/log/filter"
-	"github.com/pushthat/bud/package/overlay"
-	"github.com/pushthat/bud/package/parser"
-	"github.com/pushthat/bud/package/remotefs"
-	"github.com/pushthat/bud/package/socket"
-	"github.com/pushthat/bud/package/svelte"
-	"github.com/pushthat/bud/package/vfs"
+	"github.com/livebud/bud/framework"
+	"github.com/livebud/bud/framework/app"
+	"github.com/livebud/bud/framework/controller"
+	"github.com/livebud/bud/framework/generate"
+	"github.com/livebud/bud/framework/generator"
+	"github.com/livebud/bud/framework/public"
+	"github.com/livebud/bud/framework/transform/transformrt"
+	"github.com/livebud/bud/framework/view"
+	"github.com/livebud/bud/framework/view/dom"
+	"github.com/livebud/bud/framework/view/ssr"
+	"github.com/livebud/bud/framework/web"
+	"github.com/livebud/bud/package/commander"
+	"github.com/livebud/bud/package/di"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/js"
+	v8 "github.com/livebud/bud/package/js/v8"
+	"github.com/livebud/bud/package/log"
+	"github.com/livebud/bud/package/log/console"
+	"github.com/livebud/bud/package/log/filter"
+	"github.com/livebud/bud/package/overlay"
+	"github.com/livebud/bud/package/parser"
+	"github.com/livebud/bud/package/remotefs"
+	"github.com/livebud/bud/package/socket"
+	"github.com/livebud/bud/package/svelte"
+	"github.com/livebud/bud/package/vfs"
 )
 
 // Input contains the configuration that gets passed into the commands
@@ -234,7 +234,7 @@ func EnsureVersionAlignment(ctx context.Context, module *gomod.Module, budVersio
 	// Do nothing for the latest version
 	if budVersion == "latest" {
 		// If the module file already replaces bud, don't do anything.
-		if modfile.Replace(`github.com/pushthat/bud`) != nil {
+		if modfile.Replace(`github.com/livebud/bud`) != nil {
 			return nil
 		}
 		// Best effort attempt to replace bud with the latest version.
@@ -243,7 +243,7 @@ func EnsureVersionAlignment(ctx context.Context, module *gomod.Module, budVersio
 			return nil
 		}
 		// Replace bud with the local version if we found it.
-		if err := modfile.AddReplace("github.com/pushthat/bud", "", budModule.Directory(), ""); err != nil {
+		if err := modfile.AddReplace("github.com/livebud/bud", "", budModule.Directory(), ""); err != nil {
 			return err
 		}
 		// Write the go.mod file back to disk.
@@ -253,13 +253,13 @@ func EnsureVersionAlignment(ctx context.Context, module *gomod.Module, budVersio
 		return nil
 	}
 	target := "v" + budVersion
-	require := modfile.Require("github.com/pushthat/bud")
+	require := modfile.Require("github.com/livebud/bud")
 	// We're good, the CLI matches the runtime version
 	if require != nil && require.Version == target {
 		return nil
 	}
 	// Otherwise, update go.mod to match the CLI's version
-	if err := modfile.AddRequire("github.com/pushthat/bud", target); err != nil {
+	if err := modfile.AddRequire("github.com/livebud/bud", target); err != nil {
 		return err
 	}
 	if err := os.WriteFile(module.Directory("go.mod"), modfile.Format(), 0644); err != nil {

@@ -1,9 +1,9 @@
 package public
 
 import (
-	"github.com/pushthat/bud/framework"
-	"github.com/pushthat/bud/internal/embed"
-	"github.com/pushthat/bud/internal/imports"
+	"github.com/livebud/bud/framework"
+	"github.com/livebud/bud/internal/embed"
+	"github.com/livebud/bud/internal/imports"
 )
 
 type State struct {

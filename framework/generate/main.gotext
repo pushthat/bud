@@ -61,8 +61,8 @@ func (c *Command) Run(ctx context.Context) error {
 	}
 	genfs, err := {{ $.Provider.Name }}(
 		{{- if $.Provider.Variable "context.Context" }}ctx,{{ end }}
-		{{- if $.Provider.Variable "github.com/pushthat/bud/package/gomod.*Module" }}module,{{ end }}
-		{{- if $.Provider.Variable "github.com/pushthat/bud/package/log.Interface" }}log,{{ end }}
+		{{- if $.Provider.Variable "github.com/livebud/bud/package/gomod.*Module" }}module,{{ end }}
+		{{- if $.Provider.Variable "github.com/livebud/bud/package/log.Interface" }}log,{{ end }}
 	)
 	if err != nil {
 		return err

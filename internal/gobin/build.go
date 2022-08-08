@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/pushthat/bud/package/gomod"
+	"github.com/livebud/bud/package/gomod"
 )
 
 type Builder interface {

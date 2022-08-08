@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/pushthat/bud/internal/extrafile"
-	"github.com/pushthat/bud/package/js/v8client"
-	"github.com/pushthat/bud/package/socket"
+	"github.com/livebud/bud/internal/extrafile"
+	"github.com/livebud/bud/package/js/v8client"
+	"github.com/livebud/bud/package/socket"
 )
 
 func run(ctx context.Context) error {

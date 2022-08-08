@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 )
 
 func TestGenerators(t *testing.T) {
@@ -19,7 +19,7 @@ func TestGenerators(t *testing.T) {
 		package tailwind
 		import (
 			"context"
-			"github.com/pushthat/bud/package/overlay"
+			"github.com/livebud/bud/package/overlay"
 		)
 		type Generator struct {
 		}
@@ -50,7 +50,7 @@ func TestGenerators(t *testing.T) {
 		import (
 			"app.com/internal/markdoc"
 			"context"
-			"github.com/pushthat/bud/package/overlay"
+			"github.com/livebud/bud/package/overlay"
 			"io/fs"
 			"strings"
 		)
@@ -79,7 +79,7 @@ func TestGenerators(t *testing.T) {
 		package viewer
 		import (
 			"context"
-			"github.com/pushthat/bud/package/overlay"
+			"github.com/livebud/bud/package/overlay"
 		)
 		type Generator struct {
 		}
@@ -156,7 +156,7 @@ func TestSyntaxError(t *testing.T) {
 		package transform
 		import (
 			"context"
-			"github.com/pushthat/bud/package/overlay"
+			"github.com/livebud/bud/package/overlay"
 		)
 		type Generator struct {}
 		func (g *Generator) GenerateDir(ctx context.Context, fsys overlay.F, dir *overlay.Dir) error {

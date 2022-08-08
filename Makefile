@@ -80,7 +80,7 @@ go.fmt:
 go.install:
 	@ go build --trimpath \
 		--ldflags="-s -w \
-			-X 'github.com/pushthat/bud/internal/versions.Bud=latest' \
+			-X 'github.com/livebud/bud/internal/versions.Bud=latest' \
 		" \
 		-o /usr/local/bin/bud \
 		.
@@ -93,7 +93,7 @@ go.build.darwin.amd64:
 		--out=bud \
 		--trimpath \
 		--ldflags="-s -w \
-			-X 'github.com/pushthat/bud/internal/versions.Bud=$(BUD_VERSION)' \
+			-X 'github.com/livebud/bud/internal/versions.Bud=$(BUD_VERSION)' \
 		" \
 		./ 1> /dev/null
 	@ mkdir -p release/bud_v$(BUD_VERSION)_darwin_amd64
@@ -110,7 +110,7 @@ go.build.darwin.arm64:
 		--out=bud \
 		--trimpath \
 		--ldflags="-s -w \
-			-X 'github.com/pushthat/bud/internal/versions.Bud=$(BUD_VERSION)' \
+			-X 'github.com/livebud/bud/internal/versions.Bud=$(BUD_VERSION)' \
 		" \
 		./ 1> /dev/null
 	@ mkdir -p release/bud_v$(BUD_VERSION)_darwin_arm64
@@ -126,7 +126,7 @@ go.build.linux:
 		--out=bud \
 		--trimpath \
 		--ldflags="-s -w \
-			-X 'github.com/pushthat/bud/internal/versions.Bud=$(BUD_VERSION)' \
+			-X 'github.com/livebud/bud/internal/versions.Bud=$(BUD_VERSION)' \
 		" \
 		./ 1> /dev/null
 	@ mkdir -p release/bud_v$(BUD_VERSION)_linux_amd64
@@ -147,7 +147,7 @@ go.build.windows:
 		--out=bud \
 		--trimpath \
 		--ldflags="-s -w \
-			-X 'github.com/pushthat/bud/internal/versions.Bud=$(BUD_VERSION)' \
+			-X 'github.com/livebud/bud/internal/versions.Bud=$(BUD_VERSION)' \
 		" \
 		./ 1> /dev/null
 
@@ -250,12 +250,12 @@ GOPATH := $(shell go env GOPATH)
 e2e: e2e.bud.build
 
 e2e.bud.build:
-	GOPRIVATE=github.com/pushthat/bud go install github.com/pushthat/bud@$(BRANCH_NAME)
+	GOPRIVATE=github.com/livebud/bud go install github.com/livebud/bud@$(BRANCH_NAME)
 	git clone https://github.com/livebud/welcome
 	( cd welcome && \
 		npm install && \
 		go mod tidy && \
-		GOPRIVATE=github.com/pushthat/bud go get github.com/pushthat/bud@$(BRANCH_NAME) \
+		GOPRIVATE=github.com/livebud/bud go get github.com/livebud/bud@$(BRANCH_NAME) \
 	)
 	$(GOPATH)/bin/bud -C welcome build
 	./welcome/bud/app -h

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	esbuild "github.com/evanw/esbuild/pkg/api"
-	"github.com/pushthat/bud/internal/dag"
+	"github.com/livebud/bud/internal/dag"
 )
 
 type File struct {

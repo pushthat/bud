@@ -6,7 +6,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/pushthat/bud/internal/versions"
+	"github.com/livebud/bud/internal/versions"
 )
 
 func New() *Command {

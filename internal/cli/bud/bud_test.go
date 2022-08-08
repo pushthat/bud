@@ -6,12 +6,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/bud"
-	"github.com/pushthat/bud/package/gomod"
+	"github.com/livebud/bud/internal/cli/bud"
+	"github.com/livebud/bud/package/gomod"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 )
 
 func TestHelp(t *testing.T) {
@@ -122,7 +122,7 @@ func TestVersionAlignment(t *testing.T) {
 	ctx := context.Background()
 	dir := t.TempDir()
 	td := testdir.New(dir)
-	td.Modules["github.com/pushthat/bud"] = "v0.1.7"
+	td.Modules["github.com/livebud/bud"] = "v0.1.7"
 	is.NoErr(td.Write(ctx))
 	module, err := gomod.Find(dir)
 	is.NoErr(err)
@@ -132,7 +132,7 @@ func TestVersionAlignment(t *testing.T) {
 	is.NoErr(err)
 	module, err = gomod.Parse(td.Path("go.mod"), modFile)
 	is.NoErr(err)
-	version := module.File().Require("github.com/pushthat/bud")
+	version := module.File().Require("github.com/livebud/bud")
 	is.Equal(version.Version, "v0.1.8")
 }
 

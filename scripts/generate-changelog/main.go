@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/pushthat/bud/internal/gotemplate"
-	"github.com/pushthat/bud/package/commander"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/log/console"
+	"github.com/livebud/bud/internal/gotemplate"
+	"github.com/livebud/bud/package/commander"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/log/console"
 )
 
 //go:embed changelog.gotext

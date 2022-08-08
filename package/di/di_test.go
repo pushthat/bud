@@ -11,15 +11,15 @@ import (
 	"testing"
 
 	"github.com/lithammer/dedent"
+	"github.com/livebud/bud/internal/imports"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/di"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/log/testlog"
+	"github.com/livebud/bud/package/modcache"
+	"github.com/livebud/bud/package/parser"
+	"github.com/livebud/bud/package/vfs"
 	"github.com/matthewmueller/diff"
-	"github.com/pushthat/bud/internal/imports"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/di"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/log/testlog"
-	"github.com/pushthat/bud/package/modcache"
-	"github.com/pushthat/bud/package/parser"
-	"github.com/pushthat/bud/package/vfs"
 )
 
 func redent(s string) string {

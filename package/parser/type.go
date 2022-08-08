@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pushthat/bud/internal/gois"
+	"github.com/livebud/bud/internal/gois"
 )
 
 // Type fn

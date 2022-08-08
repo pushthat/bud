@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 )
 
 func TestBuildEmpty(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pushthat/bud/internal/cli/testcli"
-	"github.com/pushthat/bud/internal/embedded"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/internal/cli/testcli"
+	"github.com/livebud/bud/internal/embedded"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 )
 
 func TestNoProject(t *testing.T) {
@@ -107,7 +107,7 @@ func TestPlugin(t *testing.T) {
 	ctx := context.Background()
 	dir := t.TempDir()
 	td := testdir.New(dir)
-	td.Modules["github.com/pushthat/bud-test-plugin"] = "v0.0.8"
+	td.Modules["github.com/livebud/bud-test-plugin"] = "v0.0.8"
 	is.NoErr(td.Write(ctx))
 	cli := testcli.New(dir)
 	app, err := cli.Start(ctx, "run")

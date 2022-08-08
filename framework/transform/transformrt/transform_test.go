@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	esbuild "github.com/evanw/esbuild/pkg/api"
-	"github.com/pushthat/bud/framework/transform/transformrt"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
+	"github.com/livebud/bud/framework/transform/transformrt"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
 )
 
 func TestTransform(t *testing.T) {

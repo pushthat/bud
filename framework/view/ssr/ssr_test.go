@@ -10,17 +10,17 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pushthat/bud/framework/transform/transformrt"
-	"github.com/pushthat/bud/framework/view/ssr"
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/internal/testdir"
-	"github.com/pushthat/bud/internal/versions"
-	"github.com/pushthat/bud/package/gomod"
-	"github.com/pushthat/bud/package/js"
-	v8 "github.com/pushthat/bud/package/js/v8"
-	"github.com/pushthat/bud/package/log/testlog"
-	"github.com/pushthat/bud/package/overlay"
-	"github.com/pushthat/bud/package/svelte"
+	"github.com/livebud/bud/framework/transform/transformrt"
+	"github.com/livebud/bud/framework/view/ssr"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/internal/testdir"
+	"github.com/livebud/bud/internal/versions"
+	"github.com/livebud/bud/package/gomod"
+	"github.com/livebud/bud/package/js"
+	v8 "github.com/livebud/bud/package/js/v8"
+	"github.com/livebud/bud/package/log/testlog"
+	"github.com/livebud/bud/package/overlay"
+	"github.com/livebud/bud/package/svelte"
 )
 
 func TestSvelteHello(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pushthat/bud/package/modcache"
+	"github.com/livebud/bud/package/modcache"
 
-	"github.com/pushthat/bud/internal/is"
-	"github.com/pushthat/bud/package/gomod"
+	"github.com/livebud/bud/internal/is"
+	"github.com/livebud/bud/package/gomod"
 )
 
 func TestAddRequire(t *testing.T) {
@@ -46,8 +46,8 @@ func TestLocalResolveDirectory(t *testing.T) {
 	module, err := gomod.Parse("go.mod", []byte(`module app.test`))
 	is.NoErr(err)
 	modFile := module.File()
-	modFile.AddRequire("github.com/pushthat/bud-test-plugin", "v0.0.2")
-	dir, err := module.ResolveDirectory("github.com/pushthat/bud-test-plugin")
+	modFile.AddRequire("github.com/livebud/bud-test-plugin", "v0.0.2")
+	dir, err := module.ResolveDirectory("github.com/livebud/bud-test-plugin")
 	is.NoErr(err)
 	is.Equal(dir, filepath.Join(modcache.Default().Directory(), "github.com/livebud", "bud-test-plugin@v0.0.2"))
 }
